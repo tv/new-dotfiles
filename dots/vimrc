@@ -1,0 +1,23 @@
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+" Before bundles
+source ~/dotfiles/.vim/before.vim
+
+" Vundle
+set rtp+=~/dotfiles/.vim/bundle/vundle/
+call vundle#rc()
+
+" Source bundle config
+source ~/dotfiles/.vim/bundles.vim
+
+" After
+source ~/dotfiles/.vim/after.vim
+
+" Host specific configs
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
+
+filetype plugin indent on     " required!
