@@ -19,4 +19,9 @@ for f in $FILES; do
     #cp ~/$f ~/${f/.//}.orig
 done
 
+# Create folders for vim backups, swaps and undos
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/undo
+mkdir -p ~/.vim/swap
+
 vim +BundleInstall +qall
