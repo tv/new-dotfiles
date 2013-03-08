@@ -110,10 +110,6 @@ set softtabstop=4               " Let backspace delete indent
 set pastetoggle=<F4>           " pastetoggle (sane indentation on pastes)
 "set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 
-" Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
-
 " Map leader to ,
 let mapleader = ','
 
