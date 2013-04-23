@@ -18,3 +18,9 @@ Bundle 'mklabs/grunt.vim'
 
 " SCSS
 Bundle 'cakebaker/scss-syntax.vim'
+
+" Puppet syntax
+Bundle "puppetlabs/puppet-syntax-vim"
+
+" Vim Multiple Cursors
+Bundle "terryma/vim-multiple-cursors"
