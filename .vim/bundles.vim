@@ -12,9 +12,13 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet.git'
 
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
+
 " Javascripts
 Bundle 'pangloss/vim-javascript'
 Bundle 'mklabs/grunt.vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
 
 " SCSS
 Bundle 'cakebaker/scss-syntax.vim'

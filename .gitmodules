@@ -7,3 +7,6 @@
 [submodule ".vim/plugins/tern"]
 	path = .vim/plugins/tern
 	url = https://github.com/marijnh/tern.git
+[submodule "powerline"]
+	path = powerline
+	url = git@github.com:Lokaltog/powerline.git

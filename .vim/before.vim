@@ -1,9 +1,11 @@
 set background=dark
+"set background=light
 
 syntax on
 set mouse=a
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
+
 
 if has ('x') && has ('gui') " On Linux use + register for copy-paste
     set clipboard=unnamedplus
