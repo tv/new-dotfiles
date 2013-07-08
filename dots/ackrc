@@ -1,0 +1,11 @@
+# Always color, even if piping to a another program
+--color
+
+--ignore-dir=node_modules/
+--ignore-dir=app/components/
+
+# Make sure ack knows scss is css
+--type-add=css=scss
+
+#make sure ack knows how to search common filetypes used in node.js projects
+--type-set=json=.json

@@ -1,2 +1,6 @@
 #/bin/sh
-brew install git git-flow mobile-shell tmux
+brew install git\
+  git-flow\
+  mobile-shell\
+  tmux\
+  ack
