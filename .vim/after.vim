@@ -3,6 +3,8 @@ if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"
   color solarized
 endif
 
+set splitright
+
 let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
 let g:JSLintHighlightErrorLine = 1
 let g:used_javascript_libs = 'underscore,angularjs'

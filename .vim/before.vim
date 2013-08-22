@@ -1,14 +1,17 @@
 set background=dark
-"set background=light
+set background=light
 
 syntax on
 set mouse=a
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
 
+let s:uname = system("uname")
 
 if has ('x') && has ('gui') " On Linux use + register for copy-paste
     set clipboard=unnamedplus
+elseif has('unix')          " If commandline unix
+    set clipboard=unnamed
 elseif has ('gui')          " On mac and Windows, use * register for copy-paste
     set clipboard=unnamed
 endif
