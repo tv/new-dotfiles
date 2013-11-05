@@ -4,3 +4,7 @@ brew install git\
   mobile-shell\
   tmux\
   ack
+
+# Install cask
+brew tap phinze/homebrew-cask
+brew install brew-cask

@@ -105,3 +105,12 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
       set conceallevel=2 concealcursor=i
     endif
 " }
+
+" Syntastic {
+
+"   html {
+      let g:syntastic_html_tidy_ignore_errors = [
+        \ 'trimming empty'
+      \]
+"   }
+" }

@@ -28,3 +28,7 @@ Bundle "puppetlabs/puppet-syntax-vim"
 
 " Vim Multiple Cursors
 Bundle "terryma/vim-multiple-cursors"
+
+" Dash integration
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
