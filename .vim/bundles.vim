@@ -7,13 +7,19 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
+Bundle 'mmai/vim-zenmode'
+
+
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet.git'
 
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
+
+" Markdown
+Bundle 'plasticboy/vim-markdown'
 
 " Javascripts
 Bundle 'pangloss/vim-javascript'
