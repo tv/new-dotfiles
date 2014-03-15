@@ -1,5 +1,6 @@
 if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-  let g:solarized_termcolors=256
+  "let g:solarized_termcolors=256
+  let g:solarized_termcolors=16
   color solarized
 endif
 
@@ -11,6 +12,30 @@ let g:used_javascript_libs = 'underscore,angularjs'
 
 set title
 
+set fillchars+=vert:\|
+"hi VertSplit ctermbg=NONE ctermfg=NONE term=NONE
+"hi NonText ctermbg=s:g_back ctermfg=NONE term=NONE
+"
+"
+" Code folding
+set foldmethod=syntax
+autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+
+" F5 for stripping whitespaces
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+
+" Tidy json
+"function JSONFormat()
+    "%!python -m json.tool
+"endfunction
+
+"command %!python -m json.tool JSONFormat
+
+" Detect markdown
+au BufRead,BufNewFile *.md set filetype=mkd
+
+
 " Fixed something, cant remember what
 set t_kN=[6;*~
 set t_kP=[5;*~
@@ -18,6 +43,11 @@ set nocp
 
 so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
 
+" common {
+    " Remove trailing whitespaces with F5
+    nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+" }
+"
 " nerdtree {
     let NERDTreeQuitOnOpen = 1
     map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
@@ -109,8 +139,8 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
 " Syntastic {
 
 "   html {
-      let g:syntastic_html_tidy_ignore_errors = [
-        \ 'trimming empty'
-      \]
+        let g:syntastic_mode_map={ 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['html'] }
 "   }
 " }

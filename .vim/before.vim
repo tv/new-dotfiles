@@ -1,5 +1,14 @@
 set background=dark
-set background=light
+"set background=light
+
+
+"Zenmode
+let g:zenmode_background = "dark"
+let g:zenmode_colorscheme = "solarized"
+let zenmode_background = "dark"
+let zenmode_colorscheme = "solarized"
+
+let g:vim_markdown_folding_disabled=1
 
 syntax on
 set mouse=a
