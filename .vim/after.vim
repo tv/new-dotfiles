@@ -66,21 +66,33 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
     nnoremap <silent> <D-t> :CtrlP<CR>
     nnoremap <silent> <D-r> :CtrlPMRU<CR>
 
-    let g:ctrlp_root_markers = ['.ctrlp']
+    let g:ctrlp_root_markers = ['.ctrlp', '.gitignore']
 
-    let g:ctrlp_user_command = {
-        \ 'types': {
-            \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-            \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-        \ },
-        \ 'fallback': 'find %s -type f'
-    \ }
+    if executable("ag")
 
-    " Ignore node_modules and stuff
-    let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|git\|DS_Store',
-        \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
-    \ }
+        " Use ag if available
+        let g:gackprg = 'ag --nogroup --nocolor --column'
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+        let g:ctrlp_use_caching = 0
+
+    else
+
+        " fallback
+        let g:ctrlp_user_command = {
+            \ 'types': {
+                \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+                \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+            \ },
+            \ 'fallback': 'find %s -type f'
+        \ }
+
+        " Ignore node_modules and stuff
+        let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|git\|DS_Store',
+            \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+        \ }
+
+    endif
 " }
 
 
