@@ -12,7 +12,6 @@ Bundle 'mmai/vim-zenmode'
 
 
 
-Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet.git'
 
 Bundle 'mattn/gist-vim'
@@ -38,3 +37,9 @@ Bundle "terryma/vim-multiple-cursors"
 " Dash integration
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+
+" Go
+Bundle 'fatih/vim-go'
+
+" you complete me
+Bundle 'Valloric/YouCompleteMe'

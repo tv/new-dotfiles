@@ -5,6 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 export ZDOTDIR=$HOME/dotfiles
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Source Prezto.
 if [[ -s "$HOME/dotfiles/.zprezto/init.zsh" ]]; then

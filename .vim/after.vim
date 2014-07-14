@@ -34,6 +34,7 @@ autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v
 
 " Detect markdown
 au BufRead,BufNewFile *.md set filetype=mkd
+au BufRead,BufNewFile *.go set filetype=go
 
 
 " Fixed something, cant remember what
@@ -46,13 +47,13 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
 " common {
     " Remove trailing whitespaces with F5
     nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-    " Move lines up and down with ctrl+hjkl
-    nnoremap <C-j> :m .+1<CR>==
-    nnoremap <C-k> :m .-2<CR>==
-    inoremap <C-j> <Esc>:m .+1<CR>==gi
-    inoremap <C-k> <Esc>:m .-2<CR>==gi
-    vnoremap <C-j> :m '>+1<CR>gv=gv
-    vnoremap <C-k> :m '<-2<CR>gv=gv
+    " Move lines up and down with alt+hjkl
+    nnoremap <C-S-j> :m .+1<CR>==
+    nnoremap <C-S-k> :m .-2<CR>==
+    inoremap <C-S-j> <Esc>:m .+1<CR>==gi
+    inoremap <C-S-k> <Esc>:m .-2<CR>==gi
+    vnoremap <C-S-j> :m '>+1<CR>gv=gv
+    vnoremap <C-S-k> :m '<-2<CR>gv=gv
 " }
 "
 " nerdtree {
@@ -136,10 +137,6 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
     noremap! <Right> <Esc>
 " }
 
-" NeoCompCache {
-    let g:neocomplcache_enable_at_startup = 1
-" }
-
 " NeoSnippet {
     " Plugin key-mappings.
     imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -162,4 +159,14 @@ so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['html'] }
 "   }
+" }
+" Go {
+"   keys {
+        au FileType go nmap <Leader>gd <Plug>(go-doc)
+        au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+        au FileType go nmap <leader>r <Plug>(go-run)
+        au FileType go nmap <leader>b <Plug>(go-build)
+        au FileType go nmap <leader>t <Plug>(go-test)
+"   }
+"
 " }
