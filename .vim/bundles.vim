@@ -23,10 +23,9 @@ Bundle 'mmai/vim-zenmode'
 Bundle 'godlygeek/tabular'
 
 " Completion
-"Bundle 'Shougo/neocomplcache'
-"Bundle 'Shougo/neosnippet'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'Shougo/neosnippet.git'
 
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
@@ -56,3 +55,6 @@ Bundle 'rizzatti/dash.vim'
 
 " Dust.js templating
 Bundle 'jimmyhchan/dustjs.vim'
+
+" Go
+Bundle 'fatih/vim-go'
