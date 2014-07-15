@@ -41,7 +41,6 @@ set t_kN=[6;*~
 set t_kP=[5;*~
 set nocp
 
-so ~/dotfiles/.vim/plugins/tern/vim/tern.vim
 
 " common {
     " Remove trailing whitespaces with F5
