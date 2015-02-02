@@ -58,3 +58,12 @@ Bundle 'jimmyhchan/dustjs.vim'
 
 " Go
 Bundle 'fatih/vim-go'
+
+" you complete me
+Bundle 'Valloric/YouCompleteMe'
+
+" Arduino
+Bundle 'jplaut/vim-arduino-ino'
+
+" Dockerfile
+Bundle 'ekalinin/Dockerfile.vim'
