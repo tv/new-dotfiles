@@ -72,9 +72,6 @@ Bundle 'othree/html5.vim'
 " Gradle
 Bundle 'tfnico/vim-gradle'
 
-" you complete me
-Bundle 'Valloric/YouCompleteMe'
-
 " Arduino
 Bundle 'jplaut/vim-arduino-ino'
 
