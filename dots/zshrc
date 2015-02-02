@@ -4,9 +4,11 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+
+export LIBVA_DRIVER_NAME=vdpau
 export ZDOTDIR=$HOME/dotfiles
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/bin
 
 # Source Prezto.
 if [[ -s "$HOME/dotfiles/.zprezto/init.zsh" ]]; then
@@ -14,4 +16,17 @@ if [[ -s "$HOME/dotfiles/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [ -d "$HOME/.linuxbrew/bin" ] ; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+fi
 
+if [[ -s "$HOME/.dircolors" ]]; then
+    eval `dircolors $HOME/.dircolors`
+fi
+
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

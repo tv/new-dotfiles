@@ -21,9 +21,6 @@ set fillchars+=vert:\|
 set foldmethod=syntax
 autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
 
-" F5 for stripping whitespaces
-:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
 
 " Tidy json
 "function JSONFormat()
@@ -35,6 +32,7 @@ autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v
 " Detect markdown
 au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.go set filetype=go
+au BufRead,BufNewFile *.gradle set filetype=groovy
 
 
 " Fixed something, cant remember what
@@ -58,6 +56,18 @@ set nocp
 " nerdtree {
     let NERDTreeQuitOnOpen = 1
     map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+" }
+
+
+" vim-indent-guides {
+    "let g:indent_guides_start_level = 2
+    "let g:indent_guides_guide_size = 1
+    "let g:indent_guides_enable_on_vim_startup = 1
+    "let g:indent_guides_color_change_percent = 0
+
+    "let g:indent_guides_auto_colors = 0
+    "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+    "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 " }
 
 
@@ -138,17 +148,17 @@ set nocp
 
 " NeoSnippet {
     " Plugin key-mappings.
-    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    "imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+    "smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
-    " SuperTab like snippets behavior.
-    imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-    smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    "" SuperTab like snippets behavior.
+    "imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+    "smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-    " For snippet_complete marker.
-    if has('conceal')
-      set conceallevel=2 concealcursor=i
-    endif
+    "" For snippet_complete marker.
+    "if has('conceal')
+      "set conceallevel=2 concealcursor=i
+    "endif
 " }
 
 " Syntastic {
@@ -168,4 +178,15 @@ set nocp
         au FileType go nmap <leader>t <Plug>(go-test)
 "   }
 "
+" }
+" vim-jsoc {
+    let g:jsdoc_default_mapping = 0
+    au Filetype javascript nmap <silent> <Leader>l <Plug>(jsdoc)
+" }
+"
+" Javascript {
+"   keys {
+"        au FileType go nmap <Leader>gd <Plug>(go-doc)
+"        au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+"   }
 " }

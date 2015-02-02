@@ -1,4 +1,3 @@
-
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -6,11 +5,15 @@ filetype off                   " required!
 source ~/dotfiles/.vim/before.vim
 
 " Vundle
-set rtp+=~/dotfiles/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/dotfiles/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Source bundle config
 source ~/dotfiles/.vim/bundles.vim
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " After
 source ~/dotfiles/.vim/after.vim
@@ -19,5 +22,3 @@ source ~/dotfiles/.vim/after.vim
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
 endif
-
-filetype plugin indent on     " required!
