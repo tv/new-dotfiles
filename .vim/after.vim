@@ -34,6 +34,8 @@ au BufRead,BufNewFile *.md set filetype=mkd
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.gradle set filetype=groovy
 
+" GO
+
 
 " Fixed something, cant remember what
 set t_kN=[6;*~
@@ -176,6 +178,13 @@ set nocp
         au FileType go nmap <leader>r <Plug>(go-run)
         au FileType go nmap <leader>b <Plug>(go-build)
         au FileType go nmap <leader>t <Plug>(go-test)
+"   }
+"   hilight {
+        let g:go_highlight_functions = 1
+        let g:go_highlight_methods = 1
+        let g:go_highlight_structs = 1
+        let g:go_highlight_operators = 1
+        let g:go_highlight_build_constraints = 1
 "   }
 "
 " }

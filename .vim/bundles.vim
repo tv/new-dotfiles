@@ -77,3 +77,6 @@ Bundle 'jplaut/vim-arduino-ino'
 
 " Dockerfile
 Bundle 'ekalinin/Dockerfile.vim'
+
+" CQL
+Bundle 'veegee/cql-vim'
