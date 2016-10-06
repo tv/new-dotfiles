@@ -5,10 +5,18 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME/httpie"
+
 export LIBVA_DRIVER_NAME=vdpau
 export ZDOTDIR=$HOME/dotfiles
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:$HOME/bin
+
+export FZF_DEFAULT_COMMAND='ag -g ""' 
 
 # Source Prezto.
 if [[ -s "$HOME/dotfiles/.zprezto/init.zsh" ]]; then
@@ -22,8 +30,8 @@ if [ -d "$HOME/.linuxbrew/bin" ] ; then
     export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 fi
 
-if [[ -s "$HOME/.dircolors" ]]; then
-    eval `dircolors $HOME/.dircolors`
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 initDockerBuilder() {
@@ -37,3 +45,6 @@ initDockerBuilder() {
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias vim="nvim"
+
