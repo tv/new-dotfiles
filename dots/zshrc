@@ -34,17 +34,9 @@ if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-initDockerBuilder() {
-    export DOCKER_HOST=tcp://dockerbuilder:2375
-    unset DOCKER_CERT_PATH
-    unset DOCKER_TLS_VERIFY
-}
-
-
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"
-
