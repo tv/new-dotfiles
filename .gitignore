@@ -1,2 +1,5 @@
 .zcompdump*
 .zhistory
+.zsh_history
+.zprofile
+.zcompcache
