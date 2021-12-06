@@ -14,7 +14,7 @@ export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME/httpie"
 export LIBVA_DRIVER_NAME=vdpau
 export ZDOTDIR=$HOME/dotfiles
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/bin
+export PATH=$GOPATH/bin:$HOME/bin:$PATH
 
 export FZF_DEFAULT_COMMAND='ag -g ""' 
 
@@ -30,13 +30,6 @@ if [ -d "$HOME/.linuxbrew/bin" ] ; then
     export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 fi
 
-if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"

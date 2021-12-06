@@ -104,7 +104,7 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
@@ -112,6 +112,11 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: monospace
+    #family: Hack Nerd Font Mono
+    family: MesloLGS Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
+    #family: SauceCodePro Nerd Font
+    #family: Fira Sans
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -150,21 +155,21 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   #offset:
-  #  x: 0
-  #  y: 0
+    #x: 1
+    #y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   #glyph_offset:
-  #  x: 0
-  #  y: 0
+    #x: 4
+    #y: 4
 
   # Thin stroke font rendering (macOS only)
   #
@@ -173,7 +178,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -269,7 +274,7 @@ background_opacity: 0.85
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    #shape: Beam
 
     # Cursor blinking state
     #
@@ -278,7 +283,7 @@ background_opacity: 0.85
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    #blinking: On
 
   # Vi mode cursor style
   #
@@ -297,7 +302,7 @@ background_opacity: 0.85
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  #thickness: 0.15
+  #thickness: 0.45
 
 # Live config reload (changes require restart)
 #live_config_reload: true
