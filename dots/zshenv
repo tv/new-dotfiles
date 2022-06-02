@@ -70,3 +70,7 @@ if [[ -d "$TMPDIR" ]]; then
     mkdir -p "$TMPPREFIX"
   fi
 fi
+
+#
+# Configure AWS vault
+export AWS_VAULT_PROMPT=ykman

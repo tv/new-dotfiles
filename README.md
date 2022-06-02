@@ -8,3 +8,6 @@
     cd ..
     chmod +x install.sh
     ./install.sh
+
+
+ln -fs ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
